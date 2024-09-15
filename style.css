@@ -1,4 +1,12 @@
 
+
+.main-container {
+    display: flex;
+    flex-direction: column; /* Aligns items in a column */
+
+}
+
+
 .image-container {
     display: flex;
     flex-direction: column; /* Aligns items in a column */
@@ -16,19 +24,13 @@
 }
 
 .audio-container {
-    position: absolute; /* Position it absolutely */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust to truly center it */
-    text-align: center; /* Center the audio controls */
-    display: none; /* Initially hidden */
+    position: absolute;
+    top: 435%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    /* Adjust positioning as needed */
+    z-index: 1; /* Ensure it appears above the image */
 }
 
-/* Show audio container on the fourth image */
-.image-container img:nth-child(4) {
-    position: relative; /* Ensure it can be relative to the absolute position of the audio */
-}
-
-.image-container img:nth-child(4):hover ~ .audio-container {
-    display: block; /* Show audio container only when hovering over the fourth image */
-}
