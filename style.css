@@ -14,7 +14,7 @@
 }
 
 .image-container img {
-    margin: 10px 0; /* Add some space between images */
+    margin: 0px 0; /* Add some space between images */
     max-width: 100%; /* Ensures images are responsive */
 }
 
@@ -24,10 +24,12 @@
 }
 
 .audio-container {
-    position: absolute;
-    top: 435%;
+    margin: 30px 0; /* Add some space between images */
+    position: relative;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    align-items: center;
     text-align: center;
     display: flex;
     /* Adjust positioning as needed */
