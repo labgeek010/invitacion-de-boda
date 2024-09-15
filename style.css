@@ -1,0 +1,34 @@
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* Aligns items in a column */
+    align-items: center; /* Centers images horizontally */
+}
+
+.image-container img {
+    margin: 10px 0; /* Add some space between images */
+    max-width: 100%; /* Ensures images are responsive */
+}
+
+.audio-container {
+    margin-top: 20px; /* Space above the audio */
+    text-align: center; /* Center the audio controls */
+}
+
+.audio-container {
+    position: absolute; /* Position it absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to truly center it */
+    text-align: center; /* Center the audio controls */
+    display: none; /* Initially hidden */
+}
+
+/* Show audio container on the fourth image */
+.image-container img:nth-child(4) {
+    position: relative; /* Ensure it can be relative to the absolute position of the audio */
+}
+
+.image-container img:nth-child(4):hover ~ .audio-container {
+    display: block; /* Show audio container only when hovering over the fourth image */
+}
